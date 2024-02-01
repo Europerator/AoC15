@@ -1,5 +1,5 @@
 ﻿
-using System.Collection.generic
+using System.Collection.generic;
 namespace AoC15_01
 {
     public class Program

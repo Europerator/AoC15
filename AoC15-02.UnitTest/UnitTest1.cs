@@ -46,5 +46,35 @@ namespace AoC15_02.UnitTest
             Box testObject = new Box(3, 5, 4);
             Assert.AreEqual(106, testObject.requiredArea());
         }
+        [TestMethod]
+        public void testRequiredRibbonTheBoxIsLong()
+        {
+            Box testObject = new Box(5, 3, 2);
+            Assert.AreEqual(40, testObject.requiredRibbon());
+        }
+        [TestMethod]
+        public void testRequiredRibbonTheBoxIsWide()
+        {
+            Box testObject = new Box(2, 6, 4);
+            Assert.AreEqual(60, testObject.requiredRibbon());
+        }
+        [TestMethod]
+        public void testRequiredRibbonTheBoxIsTall()
+        {
+            Box testObject = new Box(3, 1, 4);
+            Assert.AreEqual(20, testObject.requiredRibbon());
+        }
+        [TestMethod]
+        public void testVolumeZero()
+        {
+            Box testObject = new Box(2, 0, 2);
+            Assert.AreEqual(0, testObject.volume());
+        }
+        [TestMethod]
+        public void testVolumeNonZero()
+        {
+            Box testObject = new Box(1, 2, 3);
+            Assert.AreEqual(6, testObject.volume());
+        }
     }
 }
