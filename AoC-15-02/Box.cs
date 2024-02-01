@@ -51,5 +51,22 @@
             }
             return area+sides.Min();
         }
+        public int requiredRibbon()
+        {
+            int ribbon = this.volume();
+            int[] sides = new int[] { this.length, this.width, this.height };
+            for (int i = 0; i < sides.Length; i++)
+            {
+                if (sides[i] != sides.Max())
+                {
+                    ribbon += sides[i]*2;
+                }
+            }
+            return ribbon;
+        }
+        public int volume()
+        {
+            return this.length * this.width * this.height;
+        }
     }
 }
